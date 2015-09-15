@@ -1,0 +1,25 @@
+{
+  "name": "kanban_app",
+  "version": "1.0.0",
+  "description": "Tutorial for webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Swelly/kanban_app.git"
+  },
+  "keywords": [
+    "webpack",
+    "es6",
+    "practice",
+    "npm"
+  ],
+  "author": "survivejs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Swelly/kanban_app/issues"
+  },
+  "homepage": "https://github.com/Swelly/kanban_app#readme"
+}
