@@ -24,9 +24,7 @@ var common = {
           include: path.resolve(ROOT_PATH, 'app'),
           loaders: [
               'style',
-              'css',
-              'autoprefixer?browsers=last 3 versions',
-              'sass?outputStyle=expanded'
+              'css'
           ]
       },
     ]
@@ -38,18 +36,18 @@ var common = {
   ]
 };
 
-if (TARGET === 'start' || !TARGET) {
+if(TARGET === 'start' || !TARGET) {
   module.exports = merge(common, {
     devtool: 'eval-source-map',
     module: {
       loaders: [
         {
-          test: /\.jsx$/,
+          test: /\.jsx?$/,
           loaders: ['react-hot', 'babel'],
-          inculde: path.resolve(ROOT_PATH, 'app')
+          include: path.resolve(ROOT_PATH, 'app')
         }
       ]
-    }
+    },
     devServer: {
       historyApiFallback: true,
       hot: true,
