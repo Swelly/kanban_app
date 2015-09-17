@@ -1,7 +1,13 @@
-var component = require('./components');
+import './main.scss';
 
-var app = document.createElement('div');
+import React from 'react';
+import App from './components/App.jsx';
 
-document.body.appendChild(app);
+main();
 
-app.appendChild(component());
+function main() {
+  const app = document.createElement('div');
+  document.body.appendChild(app);
+
+  React.render(<App />, app);
+}

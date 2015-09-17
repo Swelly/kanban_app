@@ -18,10 +18,17 @@ var common = {
   module: {
     loaders: [
       {
-        test: /\.css$/,
-        loaders: ['style', 'css'],
-        include: path.resolve(ROOT_PATH, 'app')
-      }
+          // Find SCSS within src/
+          // Sass -> CSS
+          test: /\.scss$/,
+          include: path.resolve(ROOT_PATH, 'app'),
+          loaders: [
+              'style',
+              'css',
+              'autoprefixer?browsers=last 3 versions',
+              'sass?outputStyle=expanded'
+          ]
+      },
     ]
   },
   plugins: [
