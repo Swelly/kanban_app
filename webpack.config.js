@@ -22,7 +22,12 @@ var common = {
           // Sass -> CSS
           test: /\.scss$/,
           include: path.resolve(ROOT_PATH, 'app/style'),
-          loaders: ['style', 'css', 'sass']
+          loaders: [
+            'style',
+            'css',
+            'autoprefixer?browsers=last 3 versions',
+            'sass?outputStyle=expanded'
+          ]
       },
     ]
   },
