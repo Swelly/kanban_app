@@ -12,14 +12,18 @@ body {
 // Note
 .note-list {
   @include centerer;
-  width: 35%;
+  width: 45%;
+  box-shadow: -7px 20px 0 #5A98CF;
+  background-color: #2E4457;
+  border: 1px solid #5A98CF;
+  border-radius: 5px;
 
   li {
     font-family: Nexa Bold;
     font-size: 34px;
     color: #FFF8FB;
-    margin: 30px 0;
-    text-shadow: -4px 8px 0 rgb(123, 193, 255);
+    margin: 30px 60px;
+    text-shadow: -4px 8px 0 #1C2C39;
   }
   li:nth-child(even) {
     color: #FFF;
