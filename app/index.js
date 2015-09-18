@@ -1,3 +1,4 @@
+'use-strict'
 import './style/master.scss';
 
 import React from 'react';
