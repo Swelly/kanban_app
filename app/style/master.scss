@@ -1,3 +1,6 @@
+@import "_normalize.scss";
+@import "_mixins.scss";
+
 body {
   height: 100%;
   width: 100%;
@@ -8,6 +11,15 @@ body {
 
 // Note
 .learn {
-  h1 {font-family: Nexa Bold;}
-  h2 {font-family: varela round; color: blue;}
+  text-align: center;
+  @include center-element;
+
+  h1 {
+    font-family: Nexa Bold;
+    @include opacity(0.8);
+  }
+  h2 {
+    font-family: varela round;
+    color: blue;
+  }
 }
