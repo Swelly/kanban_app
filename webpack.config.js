@@ -20,7 +20,7 @@ var common = {
       {
           // Find SCSS within src/
           // Sass -> CSS
-          test: /\.scss$/,
+          test: /\.css$/,
           include: path.resolve(ROOT_PATH, 'app'),
           loaders: [
               'style',
