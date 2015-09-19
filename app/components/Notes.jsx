@@ -10,7 +10,7 @@ export default class Notes extends React.Component {
 
   renderNote(note) {
     return (
-      <li key={`note${note.id}`}>
+      <li className='note' key={`note${note.id}`}>
         <Note task={note.task} />
       </li>
     );
