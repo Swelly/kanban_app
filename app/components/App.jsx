@@ -18,12 +18,21 @@ export default class App extends React.Component {
         },
         {
           id: uuid.v4(),
-          task: 'Do Stuff'
+          task: 'Do laundry'
         }
       ]
     };
   }
   render() {
     const notes = this.state.notes;
+
+    return (
+      <div>
+        <Notes items={notes} />
+      </div>
+    );
+  }
+    addNote() {
+    console.log('add note');
   }
 }
