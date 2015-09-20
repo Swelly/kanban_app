@@ -26,14 +26,15 @@ export default class App extends React.Component {
     // Binding 'this' so 'this' in setState
     // is in context of the App state
     this.addNote = this.addNote.bind(this);
+    this.editNote = this.editNote.bind(this);
   }
   render() {
     const notes = this.state.notes;
 
     return (
       <div>
-      <button addClass="add-note" onClick={this.addNote}>+</button>
-        <Notes items={notes} />
+        <button className="add-note" onClick={this.addNote}>+</button>
+        <Notes items={notes} onEdit={this.editNote} />
       </div>
     );
   }
@@ -46,5 +47,9 @@ export default class App extends React.Component {
         task: 'New Task'
       }])
     });
+  }
+  // Edit Note
+  editNote(noteId, task) {
+    console.log('note edited', noteId, task);
   }
 }
