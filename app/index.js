@@ -1,5 +1,6 @@
 'use-strict'
 import './style/master.scss';
+import 'array.prototype.findindex';
 
 import React from 'react';
 import App from './components/App.jsx';
