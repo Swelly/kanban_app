@@ -30,11 +30,11 @@ export default class Note extends React.Component {
 
   // Visual state for editing task text
   renderEdit() {
-    return <input type="text"
-      autofocus={true}
-      defaultValue={this.props}
-      onBlue={this.finishEdit}
-      onKeyPress={this.checkEnter} />
+    return <input type='text'
+      autoFocus={true}
+      defaultValue={this.props.task}
+      onBlur={this.finishEdit}
+      onKeyPress={this.checkEnter} />;
   }
   // Pass task text on click
   renderTask() {
@@ -51,7 +51,7 @@ export default class Note extends React.Component {
   // Check for enter key to finish editing input
   checkEnter(e) {
     if(e.key === 'Enter') {
-      this.finishEdit(e)
+      this.finishEdit(e);
     }
   }
 
