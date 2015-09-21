@@ -27,7 +27,6 @@ export default class Note extends React.Component {
     );
   }
 
-
   // Visual state for editing task text
   renderEdit() {
     return <input type='text'
@@ -36,9 +35,21 @@ export default class Note extends React.Component {
       onBlur={this.finishEdit}
       onKeyPress={this.checkEnter} />;
   }
+
+  renderDelete() {
+    return <button className="delete" title="Click to Remove" onClick={this.props.onDelete}>x</button>
+  }
+
   // Pass task text on click
   renderTask() {
-    return <div onClick={this.edit}>{this.props.task}</div>;
+    const onDelete = this.props.onDelete;
+
+    return (
+          <div onClick={this.edit}>
+            {onDelete ? this.renderDelete() : null}
+            <span className="task">{this.props.task}</span>
+          </div>
+    );
   }
 
   // edit function changes state constant to true
